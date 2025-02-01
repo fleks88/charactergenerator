@@ -1,0 +1,99 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+}
+
+.result div {
+  width: 25%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.content__main {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gender {
+  margin-left: 10px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: #249be5;
+  border-radius: 30px;
+  transition: 0.5s;
+  border: 1px solid #bab5b5;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #bab5b5;
+  transition: 0.5s ease-in-out;
+  left: 0;
+}
+
+input:checked + .slider {
+  background-color: pink;
+}
+
+input:checked + .slider::before {
+  transform: translateX(182%);
+}
+
+.gender__text_man {
+  position: absolute;
+  left: 70px;
+  transform: translateY(5%);
+  transition: 0.3s;
+}
+
+.gender__text_woman {
+  opacity: 0;
+  position: absolute;
+  left: 70px;
+  transform: translateY(5%);
+  transition: 0.3s;
+}
