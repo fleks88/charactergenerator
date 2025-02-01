@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let professions = ['Боксер','Фермер','Казак','Винодел','Бизнессмен'];
 
+
     let button = document.getElementById("create");
+
 
     function RandomItem(array) {
         return Math.floor(Math.random() * array.length);
@@ -22,14 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
             character = {
                 firstName: firstnamesF[RandomItem(firstnamesF)],
                 lastName: lastnamesF[RandomItem(lastnamesF)],
-                age: 30,
+                age: Math.round(Math.random() * (85-1) + 1),
                 profession: professions[RandomItem(professions)]
             };
         } else {
             character = {
                 firstName: firstnamesM[RandomItem(firstnamesM)],
                 lastName: lastnamesM[RandomItem(lastnamesM)],
-                age: 30,
+                age: Math.round(Math.random() * (85-1) + 1),
                 profession: professions[RandomItem(professions)]
             };
         }
